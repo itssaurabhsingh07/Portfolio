@@ -38,3 +38,41 @@ nav ul a:hover{
     color: aqua;
     border-bottom: 2px solid white;
 }
+.hamburger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 8px;
+    display: none;
+}
+.ham{
+    width: 40px;
+    height: 2px;
+    background-color: aliceblue;
+}
+.mobilemenu{
+    display: flex;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    flex-direction: column;
+    transition: all 0.5s ;
+    gap: 50px;
+}
+.activemobile{
+    transform: translateX(0%);
+}
+@media (max-width:750px) {
+    .desktopmenu{
+        display: none;
+    }
+    .hamburger{
+        display: flex;
+    }
+}
