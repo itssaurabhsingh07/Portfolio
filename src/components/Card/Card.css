@@ -1,0 +1,15 @@
+.card{
+    width: 400px;
+    height: 200px;
+    background-color: aliceblue;
+    position: relative;
+}
+.hovercard img{
+    width: 30%;
+}
+.hovercard{
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    position: absolute;
+}
