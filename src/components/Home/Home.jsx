@@ -24,6 +24,7 @@ function Home() {
               }}
             />
              </div>
+             <button>HIRE ME</button>
          </div>
         </div>
         <div className='righthome'>
