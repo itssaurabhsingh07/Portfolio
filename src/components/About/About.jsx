@@ -1,5 +1,6 @@
 import React from 'react'
 import './About.css'
+import Card from '../Card/Card.jsx'
 function About() {
   return (
     <div id='about'>
@@ -60,7 +61,7 @@ function About() {
         </div>
       </div> 
       <div className='rightabout'>
-
+        <Card />
       </div>
     </div>
   )
