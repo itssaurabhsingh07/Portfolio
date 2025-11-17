@@ -7,6 +7,9 @@ nav {
     height: 80px;
     position: fixed;
     top: 0;
+    z-index: 20;
+      background-color: #191d22;
+
 }
 
 .active {
