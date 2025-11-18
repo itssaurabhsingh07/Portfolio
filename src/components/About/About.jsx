@@ -1,6 +1,9 @@
 import React from 'react'
 import './About.css'
 import Card from '../Card/Card.jsx'
+import mern from '../../assets/mern.png'
+import devops from '../../assets/devops.png'
+import genai from '../../assets/genai.webp'
 function About() {
   return (
     <div id='about'>
@@ -61,7 +64,9 @@ function About() {
         </div>
       </div> 
       <div className='rightabout'>
-        <Card />
+        <Card title="FULL STACK DEVELOPER" image={mern}/>
+        <Card title="DEVOPS DEVELOPER" image={devops}/>
+        <Card title="GEN AI DEVELOPER" image={genai}/>
       </div>
     </div>
   )
