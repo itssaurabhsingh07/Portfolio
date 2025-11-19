@@ -14,25 +14,21 @@ This project includes sections like Home, About, Projects, Contact, and more —
 PORTFOLIOS/
 ├── public/
 ├── src/
-│ ├── assets/
-│ ├── components/
-│ │ ├── About/
-│ │ ├── Card/
-│ │ ├── Contact/
-│ │ ├── Home/
-│ │ ├── Nav/
-│ ├── projects/
-│ ├── App.jsx
-│ ├── index.css
-│ ├── main.jsx
+│   ├── assets/
+│   ├── components/
+│   │   ├── About/
+│   │   ├── Card/
+│   │   ├── Contact/
+│   │   ├── Home/
+│   │   ├── Nav/
+│   ├── projects/
+│   ├── App.jsx
+│   ├── index.css
+│   ├── main.jsx
 ├── index.html
 ├── package.json
 ├── vite.config.js
 
-yaml
-Copy code
-
----
 
 ## Tech Stack
 
