@@ -4,69 +4,103 @@ import Card from '../Card/Card.jsx'
 import mern from '../../assets/mern.png'
 import devops from '../../assets/devops.png'
 import genai from '../../assets/genai.webp'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/all'
+gsap.registerPlugin(ScrollTrigger)
+import gsap from 'gsap'
 function About() {
+  useGSAP(() => {
+    gsap.from(".circle", {
+      x: -100,
+      duration: 1,
+      opacity: 0,
+      stagger: 1,
+      scrollTrigger: {
+        trigger: ".circle",
+        scroll: "body",
+        scrub: 2,
+        markers: true,
+        start: "top 50%",
+        end: "top 30%"
+      }
+    })
+    gsap.from(".line", {
+      x: -100,
+      duration: 1,
+      opacity: 0,
+      stagger: 1,
+      scrollTrigger: {
+        trigger: ".circle",
+        scroll: "body",
+        scrub: 2,
+        markers: true,
+        start: "top 50%",
+        end: "top 30%"
+      }
+    })
+  })
   return (
     <div id='about'>
       <div className='leftabout'>
         <div className="circle-line">
-        <div className="circle"></div>
-        <div className="line"></div>
-        <div className="circle"></div>
-        <div className="line"></div>
-        <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="line"></div>
+          <div className="circle"></div>
+          <div className="line"></div>
+          <div className="circle"></div>
         </div>
         <div className="aboutdetails">
           <div className="personalinfo">
             <h1>Personal Info</h1>
             <ul>
               <li>
-              <span>Name</span> : Saurabh Singh
+                <span>Name</span> : Saurabh Singh
               </li>
               <li>
-              <span>AGE</span> : 21 YEARS
+                <span>AGE</span> : 21 YEARS
               </li>
               <li>
-              <span>GENDER</span> : MALE
+                <span>GENDER</span> : MALE
               </li>
               <li>
-              <span>LANGUAGE KNOWN</span> : HINDI,ENGLISH
+                <span>LANGUAGE KNOWN</span> : HINDI,ENGLISH
               </li>
-            </ul> 
+            </ul>
           </div>
           <div className="EDUCATION">
             <h1>Education</h1>
             <ul>
               <li>
-              <span>DEGREE</span> : B-TECH
+                <span>DEGREE</span> : B-TECH
               </li>
               <li>
-              <span>BRANCH</span> : ELECTRONICS & COMMUNICATION ENGINEERING
+                <span>BRANCH</span> : ELECTRONICS & COMMUNICATION ENGINEERING
               </li>
               <li>
-              <span>CGPA</span> : 6.5
+                <span>CGPA</span> : 6.5
               </li>
-            </ul> 
+            </ul>
           </div>
           <div className="skills">
             <h1>Skills</h1>
             <ul>
               <li>
-               FULL STACK 
+                FULL STACK
               </li>
               <li>
-              DEVOPS 
+                DEVOPS
               </li>
               <li>
-              GEN AI 
+                GEN AI
               </li>
-            </ul> 
+            </ul>
           </div>
         </div>
-      </div> 
+      </div>
       <div className='rightabout'>
-        <Card title="FULL STACK DEVELOPER" image={mern}/>
-        <Card title="DEVOPS DEVELOPER" image={devops}/>
-        <Card title="GEN AI DEVELOPER" image={genai}/>
+        <Card title="FULL STACK DEVELOPER" image={mern} />
+        <Card title="DEVOPS DEVELOPER" image={devops} />
+        <Card title="GEN AI DEVELOPER" image={genai} />
       </div>
     </div>
   )
