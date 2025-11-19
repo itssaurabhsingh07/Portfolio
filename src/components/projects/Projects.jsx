@@ -6,7 +6,27 @@ import movie from '../../assets/movie.png'
 import grocery from '../../assets/grocery.png'
 import portfolio from '../../assets/portfolioi.jpg'
 import gmail from '../../assets/gmail.png'
+import { ScrollTrigger } from 'gsap/all'
+gsap.registerPlugin(ScrollTrigger)
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 function Projects() {
+  useGSAP(() => {
+    gsap.from("#para", {
+      y: 100,
+      duration: 1,
+      opacity: 0,
+      stagger: 1,
+      scrollTrigger: {
+        trigger: "#para",
+        scroll: "body",
+        scrub: 2,
+        start: "top 80%",
+        end: "top 30%"
+      }
+    })
+  }
+  )
   return (
     <div id='projects'>
           <h1 id='para'>1.5+ YEARS EXPERIENCED IN PROJECTS</h1>
