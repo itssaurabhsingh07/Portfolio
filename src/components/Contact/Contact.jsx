@@ -9,12 +9,11 @@ function Contact() {
         </div>
         <div className='rightcontact'>
             <form action ="https://formspree.io/f/xdkbezza" method='POST' className='form'>
-                <h2>Contact Me</h2>
-                <input type="text" placeholder='Your Name' name='name' required/>
-                <input type="email" placeholder='Your Email' name='email' required/>
-                <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
-                <button type='submit' className='btn btn-primary'>Send Message</button>
-            </form>
+                <input name='Username' type='text' placeholder='Name'/>
+                <input name="Email" type='email' placeholder='email'/>
+                <textarea name='message' id='textarea' placeholder='Message'/>
+                <input type='submit' id='btn' value="Submit"/>
+             </form>   
         </div>
     </div>
   )
