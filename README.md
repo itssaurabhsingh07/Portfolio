@@ -5,7 +5,7 @@ This project includes sections like Home, About, Projects, Contact, and more —
 
 ## Live Demo
 
-🔗 **Live Project:** _Add your deployed link here_
+🔗 **Live Project:** https://thesaurabhdev.netlify.app/
 
 ---
 
