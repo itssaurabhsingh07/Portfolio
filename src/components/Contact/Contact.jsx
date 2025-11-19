@@ -1,22 +1,69 @@
 import React from 'react'
 import "./Contact.css"
 import con from "../../assets/contact.png"
+import { ScrollTrigger } from 'gsap/all'
+gsap.registerPlugin(ScrollTrigger)
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 function Contact() {
-  return (
-    <div id='contact'>
+  useGSAP(() => {
+    gsap.from(".leftcontact img", {
+      x: -100,
+      duration: 1,
+      opacity: 0,
+      stagger: 1,
+      scrollTrigger: {
+        trigger: ".leftcontact img",
+        scroll: "body",
+        scrub: 2,
+        start: "top 80%",
+        end: "top 30%"
+      }
+    })
+      gsap.from(".slider", {
+        x: -100,
+        duration: 1,
+        opacity: 0,
+        stagger: 1,
+        scrollTrigger: {
+          trigger: ".slider ",
+          scroll: "body",
+          scrub: 2,
+          start: "top 80%",
+          end: "top 30%"
+        }
+      })
+      gsap.from(".form", {
+        x:100,
+        duration: 1,
+        opacity: 0,
+        stagger: 1,
+        scrollTrigger: {
+          trigger: ".form ",
+          scroll: "body",
+          scrub: 2,
+          start: "top 80%",
+          end: "top 30%"
+        }
+      })
+      
+
+    })
+    return (
+      <div id='contact'>
         <div className='leftcontact'>
-           <img src={con} alt=''/>
+          <img src={con} alt='' />
         </div>
         <div className='rightcontact'>
-            <form action ="https://formspree.io/f/xdkbezza" method='POST' className='form'>
-                <input name='Username' type='text' placeholder='Name'/>
-                <input name="Email" type='email' placeholder='email'/>
-                <textarea name='message' id='textarea' placeholder='Message'/>
-                <input type='submit' id='btn' value="Submit"/>
-             </form>   
+          <form action="https://formspree.io/f/xdkbezza" method='POST' className='form'>
+            <input name='Username' type='text' placeholder='Name' />
+            <input name="Email" type='email' placeholder='email' />
+            <textarea name='message' id='textarea' placeholder='Message' />
+            <input type='submit' id='btn' value="Submit" />
+          </form>
         </div>
-    </div>
-  )
-}
+      </div>
+    )
+  }
 
 export default Contact
